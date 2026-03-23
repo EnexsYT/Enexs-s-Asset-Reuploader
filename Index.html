@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ENEXS'S ASSET REUPLOADER | Professional Sync</title>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg: #010409;
+            --accent-blue: #00d2ff;
+            --accent-orange: #ff8c00;
+            --glass: rgba(10, 15, 25, 0.8);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg);
+            color: white;
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            /* Harmless tarzı Mesh Gradient - Neon Mavi Odaklı */
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 210, 255, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(255, 140, 0, 0.05) 0px, transparent 50%);
+        }
+
+        nav {
+            position: fixed; top: 0; width: 100%;
+            padding: 25px 60px;
+            display: flex; justify-content: space-between; align-items: center;
+            backdrop-filter: blur(20px);
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+        }
+
+        /* Branding Fix */
+        .brand {
+            font-weight: 900;
+            font-size: 24px;
+            letter-spacing: -1px;
+        }
+        .orange-text { color: var(--accent-orange); }
+        .blue-text { color: var(--accent-blue); }
+
+        section {
+            min-height: 100vh;
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        h1 {
+            font-size: clamp(40px, 8vw, 95px);
+            font-weight: 900;
+            line-height: 0.9;
+            margin: 0;
+            letter-spacing: -4px;
+        }
+
+        /* Bento Grid GUI Fix */
+        .bento {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-auto-rows: 250px;
+            gap: 20px;
+            max-width: 1300px;
+            width: 100%;
+            padding: 40px;
+        }
+
+        .card {
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 35px;
+            padding: 40px;
+            display: flex; flex-direction: column; justify-content: flex-end;
+            text-align: left;
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .card:hover {
+            border-color: var(--accent-blue);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 210, 255, 0.1);
+        }
+
+        .span-2 { grid-column: span 2; }
+        .row-2 { grid-row: span 2; }
+
+        .btn {
+            background: white;
+            color: black;
+            padding: 20px 50px;
+            border-radius: 100px;
+            text-decoration: none;
+            font-weight: 800;
+            margin-top: 40px;
+            transition: 0.3s;
+        }
+
+        .btn:hover { transform: scale(1.05); box-shadow: 0 0 30px rgba(0, 210, 255, 0.4); }
+
+        p { color: #8899a6; font-size: 18px; line-height: 1.6; }
+    </style>
+</head>
+<body>
+
+<nav>
+    <div class="brand">ENEXS'S <span class="blue-text">REUPLOADER</span></div>
+    <div style="font-weight: 700; font-size: 14px; gap: 30px; display: flex;">
+        <a href="#features" style="color: white; text-decoration: none;">FEATURES</a>
+        <a href="#" style="color: var(--accent-blue); text-decoration: none;">SYSTEM</a>
+    </div>
+</nav>
+
+<section>
+    <div style="color: var(--accent-orange); font-weight: 800; letter-spacing: 3px; margin-bottom: 20px;">AUTOMATED ECOSYSTEM</div>
+    <h1>ENEXS'S ASSET<br><span class="blue-text">REUPLOADER</span></h1>
+    <p style="max-width: 700px;">The fastest, cookie-less asset synchronization tool. Manage, sync, and distribute with zero friction.</p>
+    <a href="#features" class="btn">LAUNCH SYSTEM</a>
+</section>
+
+<section id="features" style="background: rgba(0,0,0,0.2);">
+    <div class="bento">
+        <div class="card span-2 row-2" style="background: linear-gradient(145deg, #0a0f19 0%, #010409 100%);">
+            <i data-lucide="zap" style="color: var(--accent-orange); margin-bottom: 20px;" size="48"></i>
+            <h2 style="font-size: 38px;">1.3K+ Assets Sync.</h2>
+            <p>Our high-speed engine handles thousands of animations and meshes in seconds.</p>
+        </div>
+        <div class="card">
+            <i data-lucide="shield-check" style="color: var(--accent-blue)"></i>
+            <h3>Zero Cookies.</h3>
+            <p>Your credentials never leave your PC.</p>
+        </div>
+        <div class="card">
+            <i data-lucide="cpu" style="color: var(--accent-blue)"></i>
+            <h3>API Based.</h3>
+            <p>Direct Roblox Cloud integration.</p>
+        </div>
+        <div class="card span-2">
+            <h3>Professional Workflow.</h3>
+            <p>Designed for power users who demand speed and security.</p>
+        </div>
+    </div>
+</section>
+
+<script>lucide.createIcons();</script>
+</body>
+</html>
